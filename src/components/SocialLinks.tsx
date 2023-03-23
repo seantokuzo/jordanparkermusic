@@ -1,27 +1,29 @@
 import { FaSoundcloud } from 'react-icons/fa'
+import { SiYoutubemusic } from 'react-icons/si'
+import { footerLinks } from '../constants/footerLinks'
 
 const socialThumbnails = [
   {
     link: 'spotify',
-    url: '#'
+    url: footerLinks.spotify
   },
   {
-    link: 'itunes',
-    url: '#'
+    link: 'appleMusic',
+    url: footerLinks.appleMusic
   },
   {
     link: 'amazon',
-    url: '#'
+    url: footerLinks.amazonMusic
   },
   {
     link: 'youtubemusic',
-    url: '#'
+    url: footerLinks.youtubeMusic
   },
-  { link: 'soundcloud', url: '#' },
-  { link: 'youtube', url: '#' },
-  { link: 'instagram', url: '#' },
-  { link: 'facebook', url: '#' },
-  { link: 'twitter', url: '#' }
+  { link: 'soundcloud', url: footerLinks.soundcloud },
+  { link: 'youtube', url: footerLinks.youtube },
+  { link: 'instagram', url: footerLinks.instagram }
+  // { link: 'facebook', url: footerLinks },
+  // { link: 'twitter', url: footerLinks }
 ]
 
 const SocialLinks = () => {
@@ -40,7 +42,7 @@ const SocialLinks = () => {
           title={
             social.link === 'youtubemusic'
               ? 'Youtube Music'
-              : social.link === 'itunes'
+              : social.link === 'appleMusic'
               ? 'Apple Music'
               : social.link === 'amazon'
               ? 'Amazon Music'
@@ -59,6 +61,17 @@ const SocialLinks = () => {
                 hover:scale-110 transition-all"
             >
               <FaSoundcloud />
+            </div>
+          ) : social.link === 'youtubemusic' ? (
+            <div
+              className="w-10 h-10 sm:w-[2.35rem] sm:h-[2.35rem] md:w-12 md:h-12
+                mx-2 mt-3 sm:mx-4 sm:mt-4 md:mt-4
+                flex flex-col justify-center items-center
+                bg-white text-black rounded-full
+                text-2xl lg:text-3xl
+                hover:scale-110 transition-all"
+            >
+              <SiYoutubemusic />
             </div>
           ) : (
             <img
