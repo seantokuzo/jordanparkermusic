@@ -1,4 +1,10 @@
 import { useState } from 'react'
+import {
+  spotifyEmbedLinks,
+  appleMusicEmbedLinks,
+  amazonMusicEmbedLinks,
+  soundCloudEmbedLinks
+} from '../constants/listenLinks'
 // import { useAppContext } from '../context/appContext'
 
 // const spotifyLinks = []
@@ -28,8 +34,8 @@ const Listen = () => {
 
   return (
     <div
-      className="relative
-      w-[80%] max-w-2xl mt-24 sm:mt-28 md:mt-20 mb-10
+      className="w-[80%] max-w-2xl
+      mt-24 sm:mt-28 md:mt-28 mb-10
       flex flex-col justify-center items-center"
     >
       <div
@@ -42,23 +48,23 @@ const Listen = () => {
         {musicPlayerSelector('Amazon Music')}
         {musicPlayerSelector('SoundCloud')}
       </div>
-      {/* {musicPlayer === 'Spotify' &&
-        spotifyLinks.map((link) => {
+      {musicPlayer === 'Spotify' &&
+        spotifyEmbedLinks.map((link) => {
           return (
             <iframe
-              className="w-full min-h-[16rem]
+              className="w-full max-w-[400px] max-h-[100px]
               mb-2 last:mb-0
               rounded-2xl z-50"
               src={link}
               key={link.split('track/')[1].split('?')[0]}
               allowFullScreen={false}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
+              // loading="lazy"
             ></iframe>
           )
-        })} */}
-      {/* {musicPlayer === 'Apple Music' &&
-        itunesLinks.map((link) => {
+        })}
+      {musicPlayer === 'Apple Music' &&
+        appleMusicEmbedLinks.map((link) => {
           return (
             <iframe
               className="w-full min-h-[12rem] md:min-h-[12rem] mb-2 sm:mb-4 md:mb-6 last:mb-0 border-xl"
@@ -69,9 +75,9 @@ const Listen = () => {
               src={link}
             ></iframe>
           )
-        })} */}
-      {/* {musicPlayer === 'Amazon Music' &&
-        amazonMusicLinks.map((link) => {
+        })}
+      {musicPlayer === 'Amazon Music' &&
+        amazonMusicEmbedLinks.map((link) => {
           return (
             <iframe
               className="w-full min-h-[21rem] md:min-h-[13rem] mb-16 last:mb-0 rounded-xl"
@@ -79,9 +85,9 @@ const Listen = () => {
               src={link}
             ></iframe>
           )
-        })} */}
-      {/* {musicPlayer === 'SoundCloud' &&
-        soundcloudLinks.map((link) => {
+        })}
+      {musicPlayer === 'SoundCloud' &&
+        soundCloudEmbedLinks.map((link) => {
           return (
             <iframe
               className="w-full mb-16 last:mb-0 rounded-lg"
@@ -89,7 +95,7 @@ const Listen = () => {
               src={link}
             ></iframe>
           )
-        })} */}
+        })}
     </div>
   )
 }
