@@ -8,10 +8,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`w-full py-4 lg:py-6 ${
-        (document.body.scrollHeight <= windowSize.height || windowSize.height > 600) &&
-        'fixed bottom-0'
-      }
+      className={`w-full py-4 lg:py-6
       flex flex-col justify-center items-center`}
     >
       {pathname !== '/' && <SocialLinks />}
