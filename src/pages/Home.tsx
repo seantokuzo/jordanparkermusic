@@ -1,22 +1,30 @@
 import SocialLinks from '../components/SocialLinks'
+import { useAppContext } from '../context/appContext'
 
 const Home = () => {
+  const { windowSize } = useAppContext()
+
   return (
-    <div className="w-full min-h-screen mt-24 flex flex-col justify-center items-center">
-      <div
-        className="w-full h-screen fixed top-0 bg-no-repeat bg-center bg-cover z-0"
-        style={{
-          backgroundImage:
-            'url(https://static.wixstatic.com/media/425622_9e005c72ce634b4f8c991c2648ad0f4d~mv2.jpeg/v1/fill/w_1335,h_943,fp_0.50_0.47,q_85,usm_0.66_1.00_0.01,enc_auto/425622_9e005c72ce634b4f8c991c2648ad0f4d~mv2.jpeg)'
-        }}
-      >
-        <div className="fixed bottom-[10%] left-1/2 translate-x-[-50%] translate-y-[-50%]">
-          <SocialLinks />
+    <div className="w-full flex flex-col justify-center items-center">
+      {windowSize.width < 1024 ? (
+        <div className="w-full">
+          <img src="/img/jp-bg.jpg" />
         </div>
+      ) : (
+        <div className="w-full flex flex-col justify-center items-center">
+          <iframe
+            className="w-full min-h-screen"
+            src="https://www.youtube.com/embed/PE44II_Vq4U?autoplay=1&mute=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjordanparkermusic.com&amp;widgetid=1"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        </div>
+      )}
+      <div className="w-[80%] mt-6">
+        <SocialLinks />
       </div>
       <div
-        className="absolute top-[90vh]
-        w-full pt-10 md:py-20
+        className="w-full pt-10 md:py-20
         flex flex-col md:flex-row justify-center items-center z-100
         bg-jpBg"
       >
