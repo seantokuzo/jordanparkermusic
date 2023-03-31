@@ -7,11 +7,6 @@ import {
 } from '../constants/listenLinks'
 // import { useAppContext } from '../context/appContext'
 
-// const spotifyLinks = []
-// const itunesLinks = []
-// const amazonMusicLinks = []
-// const soundcloudLinks = []
-
 type MusicPlayer = 'Spotify' | 'Apple Music' | 'Amazon Music' | 'SoundCloud'
 
 const Listen = () => {
