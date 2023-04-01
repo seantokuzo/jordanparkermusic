@@ -15,7 +15,7 @@ const Home = () => {
         <div className="w-full max-w-[2000px] flex flex-col justify-center items-center">
           <iframe
             className="w-full min-h-[90vh]"
-            src="https://www.youtube.com/embed/PE44II_Vq4U?autoplay=1&mute=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjordanparkermusic.com&amp;widgetid=1"
+            src="https://www.youtube.com/embed/PE44II_Vq4U?autoplay=1&mute=1&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjordanparkermusic.com&amp;widgetid=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
