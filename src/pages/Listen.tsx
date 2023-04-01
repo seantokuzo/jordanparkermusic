@@ -16,7 +16,7 @@ const Listen = () => {
   const musicPlayerSelector = (player: MusicPlayer) => {
     return (
       <div
-        className={`w-max mx-3 px-3 py-1 ${
+        className={`w-max first:ml-0 last:mr-0 mx-3 px-3 py-2 ${
           musicPlayer === player ? 'bg-white text-black rounded-md' : ''
         }
           cursor-pointer`}
@@ -34,7 +34,7 @@ const Listen = () => {
       flex flex-col justify-center items-center"
     >
       <div
-        className="mb-8
+        className="w-full mb-8
         text-xs sm:text-sm md:text-base lg:text-lg
         flex flex-wrap justify-center items-center"
       >
@@ -43,13 +43,12 @@ const Listen = () => {
         {musicPlayerSelector('Amazon Music')}
         {musicPlayerSelector('SoundCloud')}
       </div>
-      {musicPlayer === 'Spotify' &&
+      {/* {musicPlayer === 'Spotify' &&
         spotifyEmbedLinks.map((link) => {
           return (
             <iframe
-              className="w-full max-w-[400px] max-h-[100px]
-              mb-2 last:mb-0
-              rounded-2xl z-50"
+              className="w-full max-w-[450px] max-h-[100px] border-2
+              z-50"
               src={link}
               key={link.split('track/')[1].split('?')[0]}
               allowFullScreen={false}
@@ -57,7 +56,29 @@ const Listen = () => {
               // loading="lazy"
             ></iframe>
           )
+        })} */}
+      {musicPlayer === 'Spotify' &&
+        spotifyEmbedLinks.map((link) => {
+          return (
+            // <iframe
+            //   z-50"
+            //   src={link}
+            //   key={link.split('track/')[1].split('?')[0]}
+            //   allowFullScreen={false}
+            //   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            //   // loading="lazy"
+            // ></iframe>
+            <iframe
+              src={link}
+              className="w-full max-w-[600px]"
+              width="100%"
+              height="250"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          )
         })}
+
       {musicPlayer === 'Apple Music' &&
         appleMusicEmbedLinks.map((link) => {
           return (
