@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   spotifyEmbedLinks,
   appleMusicEmbedLinks,
   amazonMusicEmbedLinks,
   soundCloudEmbedLinks
 } from '../constants/listenLinks'
+import { gsap } from 'gsap'
 // import { useAppContext } from '../context/appContext'
 
 type MusicPlayer = 'Spotify' | 'Apple Music' | 'Amazon Music' | 'SoundCloud'
@@ -13,13 +14,26 @@ const Listen = () => {
   // const { windowSize } = useAppContext()
   const [musicPlayer, setMusicPlayer] = useState<MusicPlayer>('Spotify')
 
+  const listenRef = useRef<HTMLDivElement>(null)
+  const q = gsap.utils.selector(listenRef)
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+    tl.from(q('.listen-anim'), {
+      opacity: 0,
+      y: -20,
+      stagger: 0.05,
+      ease: 'power1.out'
+    })
+  }, [])
+
   const musicPlayerSelector = (player: MusicPlayer) => {
     return (
       <div
         className={`w-max first:ml-0 last:mr-0 mx-3 px-3 py-2 ${
           musicPlayer === player ? 'bg-white text-black rounded-md' : ''
         }
-          cursor-pointer`}
+          cursor-pointer listen-anim`}
         onClick={() => setMusicPlayer(player)}
       >
         {player}
@@ -32,6 +46,7 @@ const Listen = () => {
       className="w-[80%] max-w-2xl
       mt-24 sm:mt-28 md:mt-28 mb-10
       flex flex-col justify-center items-center"
+      ref={listenRef}
     >
       <div
         className="w-full mb-8
@@ -70,6 +85,7 @@ const Listen = () => {
             // ></iframe>
             <iframe
               src={link}
+              key={link}
               className="w-full max-w-[600px]"
               width="100%"
               height="250"
@@ -106,9 +122,10 @@ const Listen = () => {
         soundCloudEmbedLinks.map((link) => {
           return (
             <iframe
+              src={link}
+              key={link}
               className="w-full mb-16 last:mb-0 rounded-lg"
               allow="autoplay"
-              src={link}
             ></iframe>
           )
         })}

@@ -1,18 +1,32 @@
+import { useEffect, useRef } from 'react'
 import Footer from '../components/Footer'
 import SocialLinks from '../components/SocialLinks'
 import { useAppContext } from '../context/appContext'
+import { gsap } from 'gsap'
 
 const Home = () => {
   const { windowSize } = useAppContext()
+  const homeRef = useRef<HTMLDivElement>(null)
+  const q = gsap.utils.selector(homeRef)
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+    tl.from(q('.home-anim'), {
+      opacity: 0,
+      y: -10,
+      stagger: 0.15,
+      ease: 'power1.out'
+    })
+  }, [])
 
   return (
-    <div className="w-full lg:mt-24 flex flex-col justify-center items-center">
+    <div className="w-full lg:mt-24 flex flex-col justify-center items-center" ref={homeRef}>
       {windowSize.width < 1024 ? (
-        <div className="w-full">
+        <div className="w-full home-anim">
           <img src="/img/jp-bg.jpg" />
         </div>
       ) : (
-        <div className="w-full max-w-[2000px] flex flex-col justify-center items-center">
+        <div className="w-full max-w-[2000px] flex flex-col justify-center items-center home-anim">
           <iframe
             className="w-full min-h-[90vh]"
             src="https://www.youtube.com/embed/PE44II_Vq4U?autoplay=1&mute=1&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjordanparkermusic.com&amp;widgetid=1"
@@ -24,7 +38,7 @@ const Home = () => {
       <div
         className={`${
           windowSize.width < 360 ? 'w-[80%]' : windowSize.width < 500 ? 'w-[65%]' : 'w-[80%]'
-        } mt-6 lg:mt-10`}
+        } mt-6 lg:mt-10 home-anim`}
       >
         <SocialLinks />
       </div>
@@ -34,7 +48,7 @@ const Home = () => {
         flex flex-col xl:flex-row justify-center xl:justify-evenly items-center z-100"
       >
         {/* BIO */}
-        <article className="w-[90%] xl:w-[50%] xl:h-[450px] py-10 xl:py-0 bg-jpOverlay flex flex-col justify-center items-center">
+        <article className="w-[90%] xl:w-[50%] xl:h-[450px] py-10 xl:py-0 bg-jpOverlay flex flex-col justify-center items-center home-anim">
           <div className="w-[80%] xl:w-[90%] max-w-md lg:max-w-lg xl:max-w-2xl flex flex-col justify-center items-center">
             <h2 className="text-2xl text-center font-bold">Jordan Parker</h2>
             <h3 className="mt-8 text-xs sm:text-sm md:text-base text-center">

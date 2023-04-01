@@ -1,6 +1,21 @@
+import { useEffect, useRef } from 'react'
 import { Bloggers, blogReviews } from '../constants/blogData'
+import { gsap } from 'gsap'
 
 const Blogs = () => {
+  const blogRef = useRef<HTMLDivElement>(null)
+  const q = gsap.utils.selector(blogRef)
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+    tl.from(q('.blog'), {
+      opacity: 0,
+      y: -20,
+      stagger: 0.15,
+      ease: 'power1.out'
+    })
+  }, [])
+
   const caesarImg = (
     <img
       className="w-[100px] ml-2 bg-white hover:scale-105 rounded-sm"
@@ -37,12 +52,12 @@ const Blogs = () => {
   )
 
   return (
-    <div className="w-full mt-24 flex flex-col justify-center items-center">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl">Blog Reviews</h2>
+    <div className="w-full mt-24 flex flex-col justify-center items-center" ref={blogRef}>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl blog">Blog Reviews</h2>
       <div className="w-[80%] max-w-[500px] mt-6 flex flex-col justify-center items-center">
         {blogReviews.map((review) => (
           <div
-            className="max-w-3xl mt-12 first:mt-0 bg-black/[0.5] rounded-md p-8"
+            className="max-w-3xl mt-12 first:mt-0 bg-black/[0.5] rounded-md p-8 blog"
             key={review.link}
           >
             <p className="text-xs sm:text-sm md:text-base italic">{review.review}</p>

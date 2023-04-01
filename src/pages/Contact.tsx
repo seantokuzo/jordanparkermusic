@@ -1,12 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useAppContext } from '../context/appContext'
+import { gsap } from 'gsap'
 
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const { windowSize } = useAppContext()
+
+  const contactRef = useRef<HTMLDivElement>(null)
+  const q = gsap.utils.selector(contactRef)
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+    tl.from(q('.contact-anim'), {
+      opacity: 0,
+      y: -20,
+      stagger: 0.05,
+      ease: 'power1.out'
+    })
+  }, [])
 
   return (
     <div
@@ -20,6 +34,7 @@ const Contact = () => {
           : 'mt-20 '
       }
       bg-no-repeat bg-cover bg-center`}
+      ref={contactRef}
       style={
         windowSize.width > 428 ? { backgroundImage: 'url(/img/jp-cig.jpg' } : {}
         // : { backgroundImage: 'url(/img/jp-profile.jpg' }
@@ -33,12 +48,12 @@ const Contact = () => {
         // action="https://formsubmit.co/"
         // method="POST"
       >
-        <h3 className="text-2xl text-center">Contact Me</h3>
-        <label htmlFor="name" className="mt-2 capitalize">
+        <h3 className="text-2xl text-center contact-anim">Contact Me</h3>
+        <label htmlFor="name" className="mt-2 capitalize contact-anim">
           name
         </label>
         <input
-          className={`w-full rounded-sm text-center`}
+          className={`w-full rounded-sm text-center contact-anim`}
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
@@ -47,22 +62,22 @@ const Contact = () => {
           name="name"
           required
         />
-        <label htmlFor="email" className="mt-2 capitalize">
+        <label htmlFor="email" className="mt-2 capitalize contact-anim">
           email
         </label>
         <input
-          className={`w-full rounded-sm text-center`}
+          className={`w-full rounded-sm text-center contact-anim`}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           name="email"
           required
         />
-        <label htmlFor="message" className="mt-2 capitalize">
+        <label htmlFor="message" className="mt-2 capitalize contact-anim">
           message
         </label>
         <textarea
-          className={`w-full rounded-sm h-24`}
+          className={`w-full rounded-sm h-24 contact-anim`}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           name="message"
@@ -81,7 +96,7 @@ const Contact = () => {
           className="mt-4 px-6 py-3
           bg-kuzoPurp sh-gold border-kuzoPurp border-2 rounded-md
           text-xl text-white uppercase
-          hover:scale-110 transition-all"
+          hover:scale-110 contact-anim"
         >
           send message
         </button>
