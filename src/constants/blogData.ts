@@ -3,13 +3,7 @@ export const blogReviews = [
     review:
       "Like its predecessor Paralyzed, I am very fond of Jordan Parker's passionate vocal delivery which beautifully conveys the emotion of his storytelling. Losing Again is a song about finally being in a good place in life, reassuring yourself that the bad times are part of the past and that you're going to be ok. This message is wrapped around a warm indie-pop production with intricate guitar riffs nicely intertwined with steady percussion, creating the perfect background for Jordan's gorgeous vocals and honest storytelling to soar.",
     source: 'Caesar Live n Loud',
-    link: 'https://www.caesarlivenloud.com/2021/08/jordan-parker-shares-new-single-paralyzed.html'
-  },
-  {
-    review:
-      'How about we take a little depth, a moment of introspection to reflect on the beauty of Jordan Parker\'s new song called "Losing again". At a time when everything is going a little too fast, when one piece of information chases another, it is important to settle down, to appreciate the good things like this new song that will soothe your soul for a moment.',
-    source: 'Iggy Magazine',
-    link: 'https://www.iggymagazine.com/indie-pop-emo-avec-jordan-parker-sur-losing-again/'
+    link: 'https://www.caesarlivenloud.com/2021/08/jordan-parker-shares-new-single-losing-again.html'
   },
   {
     review:
@@ -19,15 +13,21 @@ export const blogReviews = [
   },
   {
     review:
-      'Paralyzed is a memorable piece of blues-infused pop music with gorgeous vocals, a stunning guitar solo, infectious melodies and an overall timeless, feel-good atmosphere.',
-    source: 'Caesar Live n Loud',
-    link: 'https://www.caesarlivenloud.com/2021/08/jordan-parker-shares-new-single-paralyzed.html'
-  },
-  {
-    review:
       'In a nice mix of pop and R&B, Jordan Parker sings about his past and the tough time he experienced. But the bright thing about the new single Losing Again is that he now looks back and sees the mistakes and wants to change for the better. Over a nicely mixed acoustic guitar, we get a classic R&B beat, some nice electric guitars and a lot of lovely voices.',
     source: 'POPMUSIK',
     link: 'https://popmuzik.se/120013/jordan-parker-losing-again/'
+  },
+  {
+    review:
+      'Watch You Dance was a trio Collaboration between Sean Simpson, Schneider Sienes & I. We wrote it in a few hours and I instantly loved it. I made it the title and lead off track of the EP because I thought it represents the kind of style of music I have always wanted to make and could never figure out how to get that sound on my own.',
+    source: 'Purple Melon',
+    link: 'https://purplemelonmu.com/2017/04/10/chatterbox-jordan-parker/'
+  },
+  {
+    review:
+      'Paralyzed is a memorable piece of blues-infused pop music with gorgeous vocals, a stunning guitar solo, infectious melodies and an overall timeless, feel-good atmosphere.',
+    source: 'Caesar Live n Loud',
+    link: 'https://www.caesarlivenloud.com/2021/08/jordan-parker-shares-new-single-paralyzed.html'
   },
   {
     review:
@@ -37,8 +37,8 @@ export const blogReviews = [
   },
   {
     review:
-      'Watch You Dance was a trio Collaboration between Sean Simpson, Schneider Sienes & I. We wrote it in a few hours and I instantly loved it. I made it the title and lead off track of the EP because I thought it represents the kind of style of music I have always wanted to make and could never figure out how to get that sound on my own.',
-    source: 'Purple Melon',
-    link: 'https://purplemelonmu.com/2017/04/10/chatterbox-jordan-parker/'
+      'How about we take a little depth, a moment of introspection to reflect on the beauty of Jordan Parker\'s new song called "Losing again". At a time when everything is going a little too fast, when one piece of information chases another, it is important to settle down, to appreciate the good things like this new song that will soothe your soul for a moment.',
+    source: 'Iggy Magazine',
+    link: 'https://www.iggymagazine.com/indie-pop-emo-avec-jordan-parker-sur-losing-again/'
   }
 ]
