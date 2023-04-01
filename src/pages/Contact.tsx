@@ -1,23 +1,34 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-// import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/appContext'
 
 const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  // const { darkMode } = useAppContext()
+  const { windowSize } = useAppContext()
 
   return (
     <div
-      className="w-[80%] min-h-[60vh] mt-20 lg:mt-0
+      className={`w-[80%] max-w-6xl min-h-[60vh]
       lg:absolute lg:top-1/2 lg:left-1/2 lg:translate-x-[-50%] lg:translate-y-[-60%]
-      flex flex-col justify-center items-center"
+      flex flex-col justify-center items-center
+      rounded-md
+      ${
+        windowSize.height >= 746 && windowSize.width > 420
+          ? 'absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] mt-0'
+          : 'mt-20 '
+      }
+      bg-no-repeat bg-cover bg-center`}
+      style={
+        windowSize.width > 428 ? { backgroundImage: 'url(/img/jp-cig.jpg' } : {}
+        // : { backgroundImage: 'url(/img/jp-profile.jpg' }
+      }
     >
       <form
-        className="w-full max-w-md p-4 sm:p-6
-        rounded-lg
-        flex flex-col justify-center items-center"
+        className={`w-full md:w-[90%] max-w-md p-4 sm:p-6
+        rounded-lg ${windowSize.width > 428 && 'bg-black/[0.65]'}
+        flex flex-col justify-center items-center`}
         name="contact"
         // action="https://formsubmit.co/"
         // method="POST"
