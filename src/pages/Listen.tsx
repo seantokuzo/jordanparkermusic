@@ -30,7 +30,7 @@ const Listen = () => {
   const musicPlayerSelector = (player: MusicPlayer) => {
     return (
       <div
-        className={`w-max first:ml-0 last:mr-0 mx-3 px-3 py-2 ${
+        className={`w-fit first:ml-0 last:mr-0 mx-3 my-1 px-3 py-2 title-font ${
           musicPlayer === player ? 'bg-white text-black rounded-md' : ''
         }
           cursor-pointer listen-anim`}

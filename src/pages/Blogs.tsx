@@ -53,7 +53,7 @@ const Blogs = () => {
 
   return (
     <div className="w-full mt-24 flex flex-col justify-center items-center" ref={blogRef}>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl blog">Blog Reviews</h2>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl blog title-font">Reviews</h2>
       <div className="w-[80%] max-w-[500px] mt-6 flex flex-col justify-center items-center">
         {blogReviews.map((review) => (
           <div

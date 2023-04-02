@@ -26,9 +26,15 @@ const Home = () => {
           <img src="/img/jp-bg.jpg" />
         </div>
       ) : (
-        <div className="w-full max-w-[2000px] flex flex-col justify-center items-center home-anim">
+        <div className="w-full max-w-4xl flex flex-col justify-center items-center home-anim">
           <iframe
-            className="w-full min-h-[90vh]"
+            className={`${
+              windowSize.width < 1200
+                ? 'w-[840px] h-[473px]'
+                : windowSize.width < 5000
+                ? 'w-[1120px] h-[630px]'
+                : ''
+            }`}
             src="https://www.youtube.com/embed/PE44II_Vq4U?autoplay=1&mute=1&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;loop=1&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjordanparkermusic.com&amp;widgetid=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -50,7 +56,9 @@ const Home = () => {
         {/* BIO */}
         <article className="w-[90%] xl:w-[50%] xl:h-[450px] py-10 xl:py-0 bg-jpOverlay flex flex-col justify-center items-center home-anim">
           <div className="w-[80%] xl:w-[90%] max-w-md lg:max-w-lg xl:max-w-2xl flex flex-col justify-center items-center">
-            <h2 className="text-2xl text-center font-bold">Jordan Parker</h2>
+            <h2 className="text-2xl text-center font-bold title-font tracking-wide">
+              Jordan Parker
+            </h2>
             <h3 className="mt-8 text-xs sm:text-sm md:text-base text-center">
               LA born, Portland raised, Jordan Parker brings a mix of R&B, soul to the pop scene.
               Beyond his head turning, powerhouse voice and his mysterious on-stage charisma, Jordan

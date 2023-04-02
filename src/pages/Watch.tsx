@@ -14,6 +14,7 @@ const Watch = () => {
     tl.from(q('.watch-anim'), {
       opacity: 0,
       y: -20,
+      duration: 1,
       stagger: 0.05,
       ease: 'power1.out'
     })
@@ -36,9 +37,7 @@ const Watch = () => {
               ? 'w-[700px] h-[394px]'
               : windowSize.width < 1200
               ? 'w-[840px] h-[473px]'
-              : windowSize.width < 5000
-              ? 'w-[1120px] h-[630px]'
-              : ''
+              : 'w-[1120px] h-[630px]'
           } mt-10 watch-anim`}
           // className="max-w-full w-[560px] h-[315px] mt-6"
           src={link}

@@ -36,19 +36,19 @@ const Contact = () => {
       bg-no-repeat bg-cover bg-center`}
       ref={contactRef}
       style={
-        windowSize.width > 428 ? { backgroundImage: 'url(/img/jp-cig.jpg' } : {}
+        windowSize.width > 0 ? { backgroundImage: 'url(/img/jp-cig.jpg' } : {}
         // : { backgroundImage: 'url(/img/jp-profile.jpg' }
       }
     >
       <form
         className={`w-full md:w-[90%] max-w-md p-4 sm:p-6
         rounded-lg ${windowSize.width > 428 && 'bg-black/[0.65]'}
-        flex flex-col justify-center items-center`}
+        flex flex-col justify-center items-center title-font`}
         name="contact"
         // action="https://formsubmit.co/"
         // method="POST"
       >
-        <h3 className="text-2xl text-center contact-anim">Contact Me</h3>
+        <h3 className="text-2xl text-center title-font contact-anim">Contact Me</h3>
         <label htmlFor="name" className="mt-2 capitalize contact-anim">
           name
         </label>
@@ -94,7 +94,7 @@ const Contact = () => {
         <button
           type="submit"
           className="mt-4 px-6 py-3
-          bg-kuzoPurp sh-gold border-kuzoPurp border-2 rounded-md
+          bg-black border-2 rounded-md
           text-xl text-white uppercase
           hover:scale-110 contact-anim"
         >

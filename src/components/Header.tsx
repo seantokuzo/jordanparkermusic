@@ -28,7 +28,7 @@ const Header = () => {
       <Link
         to={page}
         className={`mx-2 md:mx-4
-        text-xs sm:text-sm md:text-base lg:text-lg
+        text-xs sm:text-sm md:text-base lg:text-lg title-font
         ${pathname === pagePath && 'underline font-bold'} capitalize header-anim`}
       >
         {page === '/' ? 'Home' : page}
@@ -52,7 +52,9 @@ const Header = () => {
           }}
         ></div>
       )}
-      {windowSize.width >= 640 && <h1 className="text-4xl ml-8 header-anim">JORDAN PARKER</h1>}
+      {windowSize.width >= 640 && (
+        <h1 className="text-4xl ml-8 title-font header-anim">JORDAN PARKER</h1>
+      )}
       <div className="w-fit flex justify-end items-center pr-4 md:pr-6">
         <div className="flex justify-end items-center">
           {linkFactory('/')}
