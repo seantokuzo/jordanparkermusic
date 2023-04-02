@@ -1,8 +1,9 @@
 <div align="center">
 <br>
 <p align="center">
-  <img align="center" width="400px" alt="Portfolio preview dark mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_lg_800x800.png">
-  <img align="center" width="400px" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_sm_800x800.png">
+  <img align="center" width="400px" alt="Large screen site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_lg_800x800.png">
+  <!-- <img align="center" width="400px" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_sm_800x800.png"> -->
+  <img align="center" height="400px" alt="Mobile site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Home.PNG">
 </p>
 <h1 align="center">Jordan Parker Music Website</h1>
 <!-- <h3 align="center"></h3> -->
@@ -21,13 +22,15 @@
 <br>
 <br>
 <br>
-  <img align="center" width="400px" alt="Portfolio preview contact page dark mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Listen_soundcloud_800x800.png">
-  <br>
-  <br>
-  <img align="center" width="400px" alt="Portfolio preview contact page light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Watch_800x800.png">
-  <br>
-  <br>
-  <img align="center" width="400px" alt="Portfolio preview contact page light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Contact_800x800.png">
+  <p align="center">
+  <img align="center" width="400px" alt="Listen page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Listen_soundcloud_800x800.png">
+  <img align="center" width="400px" alt="Music Video page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Watch_800x800.png">
+</p>
+<br>
+  <p align="center">
+  <img align="center" width="300px" alt="Blog page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Blog.PNG">
+  <img align="center" width="300px" alt="Contact Page Preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Contact.PNG">
+</p>
 <br>
 <br>
 <br>
