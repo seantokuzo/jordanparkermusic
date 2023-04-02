@@ -30,10 +30,11 @@ const Listen = () => {
   const musicPlayerSelector = (player: MusicPlayer) => {
     return (
       <div
-        className={`w-fit first:ml-0 last:mr-0 mx-3 my-1 px-3 py-2 title-font ${
-          musicPlayer === player ? 'bg-white text-black rounded-md' : ''
+        className={`w-fit min-w-[80px] mx-3 my-1 px-3 py-2 title-font ${
+          musicPlayer === player ? 'bg-white text-black rounded-md' : 'hover:scale-105'
         }
-          cursor-pointer listen-anim`}
+        text-base md:text-lg lg:text-xl text-center
+        cursor-pointer listen-anim`}
         onClick={() => setMusicPlayer(player)}
       >
         {player}
@@ -43,7 +44,7 @@ const Listen = () => {
 
   return (
     <div
-      className="w-[80%] max-w-2xl
+      className="w-[85%] max-w-2xl
       mt-24 sm:mt-28 md:mt-28 mb-10
       flex flex-col justify-center items-center"
       ref={listenRef}
