@@ -39,7 +39,7 @@
   <br>
   <br>
   <br>
-  <img align="center" width="60px" alt="seantokuo logo" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/fav-icons/seantokuzo-logo-purp.png">
+  <img align="center" width="60px" alt="seantokuo logo" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-144.png">
   <br>
   <p>by seantokuzo</p>
 </div>
