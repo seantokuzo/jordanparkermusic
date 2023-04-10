@@ -1,12 +1,10 @@
 <div align="center">
 <br>
 <p align="center">
-  <img align="center" width="400px" alt="Large screen site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_lg_800x800.png">
-  <!-- <img align="center" width="400px" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Home_sm_800x800.png"> -->
-  <img align="center" height="400px" alt="Mobile site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Home.PNG">
+  <img align="center" height="300px" style="border-radius: 5px;" alt="Large screen site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_lg-Home.png">
+  <img align="center" height="300px" style="border-radius: 10px;" alt="Mobile site preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_sm-Home.png">
 </p>
 <h1 align="center">Jordan Parker Music Website</h1>
-<!-- <h3 align="center"></h3> -->
 <br>
 <h4>Check it out at:<h4>
 <a href="https://jordanparkermusic.com" target="_blank" rel="noreferrer noopener">
@@ -23,13 +21,18 @@
 <br>
 <br>
   <p align="center">
-  <img align="center" width="400px" alt="Listen page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Listen_soundcloud_800x800.png">
-  <img align="center" width="400px" alt="Music Video page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/images_1/Watch_800x800.png">
+  <img align="center" height="300px" style="border-radius: 5px;" alt="Listen page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_lg-Listen-soundcloud.png">
+  <img align="center" height="300px" style="border-radius: 10px;" alt="Music Video page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_sm-Listen-spotify.png">
 </p>
 <br>
   <p align="center">
-  <img align="center" width="300px" alt="Blog page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Blog.PNG">
-  <img align="center" width="300px" alt="Contact Page Preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/mobile_images/jp_mobile_Contact.PNG">
+  <img align="center" height="300px" style="border-radius: 5px;" alt="Blog page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_lg-Watch.png">
+  <img align="center" height="300px" style="border-radius: 10px;" alt="Contact Page Preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_sm-Watch.png">
+</p>
+<br>
+  <p align="center">
+  <img align="center" height="300px" style="border-radius: 5px;" alt="Blog page preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_lg-Blog.png">
+  <img align="center" height="300px" style="border-radius: 10px;" alt="Contact Page Preview" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp_sm-Contact.png">
 </p>
 <br>
 <br>
