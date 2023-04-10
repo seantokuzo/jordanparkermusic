@@ -48,7 +48,7 @@ const Header = () => {
           className="w-12 h-12 ml-4 rounded-full bg-cover bg-no-repeat bg-center text-xxs flex justify-center items-center header-anim"
           style={{
             backgroundImage:
-              'url(https://static.wixstatic.com/media/425622_9e005c72ce634b4f8c991c2648ad0f4d~mv2.jpeg/v1/fill/w_1335,h_943,fp_0.50_0.47,q_85,usm_0.66_1.00_0.01,enc_auto/425622_9e005c72ce634b4f8c991c2648ad0f4d~mv2.jpeg)'
+              'url(https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/jp-music-site-images/jp-profile-crop.jpg)'
           }}
         ></div>
       )}
