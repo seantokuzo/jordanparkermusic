@@ -53,7 +53,7 @@ const Contact = () => {
           name
         </label>
         <input
-          className={`w-full rounded-sm text-center contact-anim`}
+          className={`w-full rounded-sm text-center contact-anim text-black py-1`}
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
@@ -66,7 +66,7 @@ const Contact = () => {
           email
         </label>
         <input
-          className={`w-full rounded-sm text-center contact-anim`}
+          className={`w-full rounded-sm text-center contact-anim text-black py-1`}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
@@ -77,7 +77,7 @@ const Contact = () => {
           message
         </label>
         <textarea
-          className={`w-full rounded-sm h-24 contact-anim`}
+          className={`w-full rounded-sm h-24 contact-anim text-black py-1 px-2`}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           name="message"
