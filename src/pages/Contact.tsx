@@ -85,12 +85,12 @@ const Contact = () => {
           maxLength={400}
           required
         />
-        <input
+        {/* <input
           type="hidden"
           name="_next"
           // TODO - change link once live
           value="https://localhost:5150/thankyou"
-        ></input>
+        ></input> */}
         <button
           type="submit"
           className="mt-4 px-6 py-3
