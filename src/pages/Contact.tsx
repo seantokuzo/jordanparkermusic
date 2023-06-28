@@ -45,8 +45,8 @@ const Contact = () => {
         rounded-lg ${windowSize.width > 428 && 'bg-black/[0.65]'}
         flex flex-col justify-center items-center title-font`}
         name="contact"
-        // action="https://formsubmit.co/s.kuzo86@gmail.com"
-        action="https://formsubmit.co/jordanparkersmith44@gmail.com"
+        action="https://formsubmit.co/e7a944566da9f7ec8240de0a0423b54d"
+        // action="https://formsubmit.co/jordanparkersmith44@gmail.com"
         method="POST"
       >
         <h3 className="text-2xl text-center title-font contact-anim">Contact Me</h3>
