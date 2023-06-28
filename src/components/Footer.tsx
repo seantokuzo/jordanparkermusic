@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer
       className={`w-full py-4 lg:py-6 ${
-        pathname === '/contact' && windowSize.height > 700 && 'absolute bottom-1'
+        (pathname === '/contact' || pathname === '/thankyou') && windowSize.height > 700 && 'absolute bottom-1'
       }
       flex flex-col justify-center items-center`}
     >

@@ -24,7 +24,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`w-[80%] max-w-6xl min-h-[60vh]
+      className={`w-[80%] max-w-xl min-h-[60vh]
       lg:absolute lg:top-1/2 lg:left-1/2 lg:translate-x-[-50%] lg:translate-y-[-60%]
       flex flex-col justify-center items-center
       rounded-md
@@ -33,10 +33,10 @@ const Contact = () => {
           ? 'absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] mt-0'
           : 'mt-20 '
       }
-      bg-no-repeat bg-cover bg-center`}
+      bg-cover bg-center`}
       ref={contactRef}
       style={
-        windowSize.width > 0 ? { backgroundImage: 'url(/img/jp-cig.jpg' } : {}
+        windowSize.width > 0 ? { backgroundImage: 'url(/img/jp-contact.jpg' } : {}
         // : { backgroundImage: 'url(/img/jp-profile.jpg' }
       }
     >
@@ -45,8 +45,9 @@ const Contact = () => {
         rounded-lg ${windowSize.width > 428 && 'bg-black/[0.65]'}
         flex flex-col justify-center items-center title-font`}
         name="contact"
-        // action="https://formsubmit.co/"
-        // method="POST"
+        // action="https://formsubmit.co/s.kuzo86@gmail.com"
+        action="https://formsubmit.co/jordanparkersmith44@gmail.com"
+        method="POST"
       >
         <h3 className="text-2xl text-center title-font contact-anim">Contact Me</h3>
         <label htmlFor="name" className="mt-2 capitalize contact-anim">
@@ -85,12 +86,13 @@ const Contact = () => {
           maxLength={400}
           required
         />
-        {/* <input
+        <input
           type="hidden"
           name="_next"
           // TODO - change link once live
-          value="https://localhost:5150/thankyou"
-        ></input> */}
+          value="https://jordanparkermusic.com/thankyou"
+          // value="http://localhost:5150/thankyou"
+        ></input>
         <button
           type="submit"
           className="mt-4 px-6 py-3

@@ -13,10 +13,10 @@ const ThankYou = () => {
       <Link
         to={path}
         className="p-3 mx-3
-        text-black
-        border-2 rounded-full border-black
+        text-white
+        border-2 rounded-full border-white
         text-xl sm:text-2xl md:text-3xl
-        hover:scale-110 transition-all"
+        hover:scale-110 transition-all shadow-basicLg"
         title={
           path === '/' ? 'Home' : path.slice(1).slice(0, 1).toUpperCase() + path.slice(1).slice(1)
         }
@@ -37,7 +37,11 @@ const ThankYou = () => {
       flex flex-col justify-end items-center
         `}
     >
-      <div className={`w-full min-h-[40vh]`}></div>
+      {/* <div className={`w-full min-h-[40vh]`}></div> */}
+      <img
+        src="./img/jp-contact.jpg"
+        className='max-h-[50vh] rounded-sm shadow-basic'
+        />
       <div className="mt-0 sm:mt-2 md:mt-4 text-kuzoOrange font-bold text-sm md:text-2xl">
         Thank you for reaching out
       </div>
