@@ -67,14 +67,12 @@ const AppContextProvider = ({ children }: Props) => {
   }
 
   const getVideoData = async () => {
-    console.log('Get Video Data')
     const res = await fetch(mediaAPI.videos)
     const data = await res.json()
     dispatch({ type: ActionType.GET_VIDEO_DATA, payload: { videoData: data.data } })
   }
 
   const getAudioData = async () => {
-    console.log('Get Audio Data')
     // Spotify
     const spotifyRes = await fetch(mediaAPI.spotify)
     const spotifyData = await spotifyRes.json()
@@ -82,15 +80,24 @@ const AppContextProvider = ({ children }: Props) => {
     // Apple Music
     const appleMusicRes = await fetch(mediaAPI.appleMusic)
     const appleMusicData = await appleMusicRes.json()
-    dispatch({ type: ActionType.GET_APPLE_MUSIC_DATA, payload: { appleMusicData: appleMusicData.data } })
+    dispatch({
+      type: ActionType.GET_APPLE_MUSIC_DATA,
+      payload: { appleMusicData: appleMusicData.data }
+    })
     // Amazon Music
     const amazonMusicRes = await fetch(mediaAPI.amazonMusic)
     const amazonMusicData = await amazonMusicRes.json()
-    dispatch({ type: ActionType.GET_AMAZON_MUSIC_DATA, payload: { amazonMusicData: amazonMusicData.data } })
+    dispatch({
+      type: ActionType.GET_AMAZON_MUSIC_DATA,
+      payload: { amazonMusicData: amazonMusicData.data }
+    })
     // Soundcloud Music
     const soundcloudRes = await fetch(mediaAPI.soundcloud)
     const soundcloudData = await soundcloudRes.json()
-    dispatch({ type: ActionType.GET_SOUNDCLOUD_DATA, payload: { soundcloudData: soundcloudData.data } })
+    dispatch({
+      type: ActionType.GET_SOUNDCLOUD_DATA,
+      payload: { soundcloudData: soundcloudData.data }
+    })
   }
 
   useEffect(() => {
