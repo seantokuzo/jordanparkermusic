@@ -37,7 +37,6 @@ const ThankYou = () => {
       flex flex-col justify-end items-center
         `}
     >
-      {/* <div className={`w-full min-h-[40vh]`}></div> */}
       <img
         src="./img/jp-contact.jpg"
         className='max-h-[50vh] rounded-sm shadow-basic'

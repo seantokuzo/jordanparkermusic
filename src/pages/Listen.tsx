@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
-import {
-  spotifyEmbedLinks,
-  appleMusicEmbedLinks,
-  amazonMusicEmbedLinks,
-  soundCloudEmbedLinks
-} from '../constants/listenLinks'
+// OLD HARDCODED LINKS
+// import {
+//   spotifyEmbedLinks,
+//   appleMusicEmbedLinks,
+//   amazonMusicEmbedLinks,
+//   soundCloudEmbedLinks
+// } from '../constants/listenLinks'
 import { gsap } from 'gsap'
-// import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/appContext'
 
 type MusicPlayer = 'Spotify' | 'Apple Music' | 'Amazon Music' | 'SoundCloud'
 
 const Listen = () => {
-  // const { windowSize } = useAppContext()
+  const { spotifyData, appleMusicData, amazonMusicData, soundcloudData } = useAppContext()
   const [musicPlayer, setMusicPlayer] = useState<MusicPlayer>('Spotify')
 
   const listenRef = useRef<HTMLDivElement>(null)
@@ -59,34 +60,12 @@ const Listen = () => {
         {musicPlayerSelector('Amazon Music')}
         {musicPlayerSelector('SoundCloud')}
       </div>
-      {/* {musicPlayer === 'Spotify' &&
-        spotifyEmbedLinks.map((link) => {
-          return (
-            <iframe
-              className="w-full max-w-[450px] max-h-[100px] border-2
-              z-50"
-              src={link}
-              key={link.split('track/')[1].split('?')[0]}
-              allowFullScreen={false}
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              // loading="lazy"
-            ></iframe>
-          )
-        })} */}
       {musicPlayer === 'Spotify' &&
-        spotifyEmbedLinks.map((link) => {
+        spotifyData.map((song) => {
           return (
-            // <iframe
-            //   z-50"
-            //   src={link}
-            //   key={link.split('track/')[1].split('?')[0]}
-            //   allowFullScreen={false}
-            //   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            //   // loading="lazy"
-            // ></iframe>
             <iframe
-              src={link}
-              key={link}
+              src={song.link}
+              key={song.link}
               className="w-full max-w-[600px]"
               width="100%"
               height="250"
@@ -97,34 +76,34 @@ const Listen = () => {
         })}
 
       {musicPlayer === 'Apple Music' &&
-        appleMusicEmbedLinks.map((link) => {
+        appleMusicData.map((song) => {
           return (
             <iframe
               className="w-full min-h-[12rem] md:min-h-[12rem] mb-2 sm:mb-4 md:mb-6 last:mb-0 border-xl"
-              key={link}
+              key={song.link}
               allowFullScreen={false}
               allow="autoplay *; encrypted-media *;"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src={link}
+              src={song.link}
             ></iframe>
           )
         })}
       {musicPlayer === 'Amazon Music' &&
-        amazonMusicEmbedLinks.map((link) => {
+        amazonMusicData.map((song) => {
           return (
             <iframe
               className="w-full min-h-[21rem] md:min-h-[13rem] mb-16 last:mb-0 rounded-xl"
-              key={link}
-              src={link}
+              key={song.link}
+              src={song.link}
             ></iframe>
           )
         })}
       {musicPlayer === 'SoundCloud' &&
-        soundCloudEmbedLinks.map((link) => {
+        soundcloudData.map((song) => {
           return (
             <iframe
-              src={link}
-              key={link}
+              src={song.link}
+              key={song.link}
               className="w-full mb-16 last:mb-0 rounded-lg"
               allow="autoplay"
             ></iframe>

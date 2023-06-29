@@ -18,7 +18,7 @@ export const appleMusicEmbedLinks = [
   'https://embed.music.apple.com/us/album/paralyzed/1578063176?i=1578063177',
   'https://embed.music.apple.com/us/album/all-i-know/1219609224?i=1219609235',
   'https://embed.music.apple.com/us/album/watch-you-dance/1219609224?i=1219609231',
-  'https://embed.music.apple.com/us/album/weight/1214938030?i=1214938102'
+  'https://embed.music.apple.com/us/album/weight/1214938030?i=1214938102',
 ]
 
 export const amazonMusicEmbedLinks = [
@@ -34,5 +34,5 @@ export const soundCloudEmbedLinks = [
   'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1093220461&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
   'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/323515283&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
   'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/314219112&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
-  'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/312091674&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+  'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/312091674&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
 ]
