@@ -13,6 +13,7 @@ export interface MediaData {
 export interface StateInterface {
   // darkMode: boolean
   windowSize: WindowSize
+  homepageVideoData: MediaData | undefined
   videoData: MediaData[]
   spotifyData: MediaData[]
   appleMusicData: MediaData[]
@@ -23,6 +24,7 @@ export interface StateInterface {
 export const initialState: StateInterface = {
   // darkMode: true,
   windowSize: { width: window.innerWidth, height: window.innerHeight },
+  homepageVideoData: undefined,
   videoData: [],
   spotifyData: [],
   appleMusicData: [],
@@ -66,6 +68,12 @@ const AppContextProvider = ({ children }: Props) => {
     dispatch({ type: ActionType.UPDATE_WINDOW_SIZE, payload: { newSize } })
   }
 
+  const getHomepageVideoData = async () => {
+    const res = await fetch(mediaAPI.homepage)
+    const data = await res.json()
+    dispatch({ type: ActionType.GET_HOMEPAGE_VIDEO, payload: { homepageVideoData: data.data[0] } })
+  }
+
   const getVideoData = async () => {
     const res = await fetch(mediaAPI.videos)
     const data = await res.json()
@@ -101,6 +109,7 @@ const AppContextProvider = ({ children }: Props) => {
   }
 
   useEffect(() => {
+    getHomepageVideoData()
     getVideoData()
     getAudioData()
   }, [])

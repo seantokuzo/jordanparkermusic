@@ -8,6 +8,10 @@ type Action =
       payload: { newSize: WindowSize }
     }
   | {
+      type: ActionType.GET_HOMEPAGE_VIDEO
+      payload: { homepageVideoData: MediaData }
+    }
+  | {
       type: ActionType.GET_VIDEO_DATA
       payload: { videoData: MediaData[] }
     }
@@ -39,6 +43,11 @@ const reducer = (state: StateInterface, action: Action): StateInterface => {
       return {
         ...state,
         windowSize: action.payload.newSize
+      }
+    case ActionType.GET_HOMEPAGE_VIDEO:
+      return {
+        ...state,
+        homepageVideoData: action.payload.homepageVideoData
       }
     case ActionType.GET_VIDEO_DATA:
       return {

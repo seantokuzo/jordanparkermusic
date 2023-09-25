@@ -1,4 +1,6 @@
 export const mediaAPI = {
+  homepage:
+    'https://script.google.com/macros/s/AKfycbyPpwE-rEnroVJwCj6HaSf6C1j5MhMt0KCgkymtwNQ6lqLGOYZGEfsLqi_woQPOJKSo/exec',
   videos:
     'https://script.google.com/macros/s/AKfycbzR2lQM3JQ9Dmr9GtMw72gboX7J0Xc4socTxjCQjG2dNbLn5ebU_3WoiAhn47JX3PUk/exec',
   spotify:
